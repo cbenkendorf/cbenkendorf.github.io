@@ -1,0 +1,19 @@
+<html>
+<head>
+  <script type="text/javascript">
+
+    window.onload = init;
+    function init() {
+      var elem = document.getElementById('referrer');
+      elem.value = location.search.split('ref=')[1];
+    }
+  </script>
+</head>
+<body>
+  <form action="secondpage.html" method="GET" name="emailsignup">
+    <input type="hidden" name="referrer" id="referrer">
+    <input type="text" name="email" id="email">
+    <input type="submit">
+  </form>
+</body>
+</html>

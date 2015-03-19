@@ -1,0 +1,26 @@
+<html>
+<head>
+  <script language="javascript">
+    function parse(str, separator) {
+      var parts = str.split(separator);
+      var output = [];
+      for (var i = 0; i < parts.length; i++) {
+        var keyValue = parts[i].split('=');
+        output.push(keyValue[1]);
+      }
+      return output;
+    }
+
+    var get_input = parse(location.search, "&");
+
+    if (get_input[0]) {
+      document.write("congrats! you already have one credit courtesy of " + get_input[0] + "!");
+    }
+    else {
+      document.write("No referral - default text");
+    }
+</script>
+</head>
+<body>
+</body>
+</html>
